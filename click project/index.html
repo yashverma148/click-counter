@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(./pexels-eberhardgross-443446.jpg);
+            background-size: cover;
+        }
+        button{
+            height: 100px;
+            width: 200px;
+            font-size: 20px;
+            box-shadow: 15px 15px 15px black;
+            border-radius: 20px;
+            transition: 0.5s;
+        }
+        .onClick1:hover{
+            background-color: green;
+            color: white;
+            box-shadow: 10px 10px 15px black;
+        }
+        .onClick2:hover{
+            background-color: yellow;
+            color: white;
+            box-shadow: 10px 10px 15px black;
+        }
+        .onClick3:hover{
+            background-color: red;
+            color: white;
+            box-shadow: 10px 10px 15px black;
+        }
+        div{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 100px;
+        }
+        #counter{
+            color: white;
+            font-size: 30px;
+            }
+        #counter p{
+            background-color: rgba(0, 0, 0, 0.575);
+            padding: 10px;
+            box-shadow: 10px 10px 15px black;
+            border-radius: 10px;
+            font-weight: bolder;
+        }    
+        .speed select{
+            padding: 15px;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+        .speed{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="counter"><p>Counter: 0</p></div>
+    <div class="speed">
+        <!-- <label for="speed"><p>Select Speed:</p></label> -->
+        <select id="speed">
+            <option value="none">Select Speed</option>
+            <option value="1000">1 Second</option>
+            <option value="500">0.5 Seconds</option>
+            <option value="200">0.2 Seconds</option>
+        </select>
+    </div>
+    <div>
+        <button class="onClick1" onclick="startCounter()">Start</button>
+        <button class="onClick2" onclick="pauseCounter()">Pause</button>
+        <button class="onClick3" onclick="resetCounter()">Reset</button>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
